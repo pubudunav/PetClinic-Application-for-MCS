@@ -1,0 +1,109 @@
+
+    <ion-header [translucent]="true">
+      <ion-toolbar color="warning" >
+        <ion-title>
+          PetClinic<ion-icon name="logo-octocat" ></ion-icon>
+        </ion-title>
+      </ion-toolbar>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    </ion-header>
+    
+    <ion-app>
+    <ion-content [fullscreen]="true" >
+      <ion-header collapse="condense">
+        <ion-toolbar>
+        </ion-toolbar>
+      </ion-header>
+    <body>
+      <ion-app>
+      <ion-content >
+        <ion-grid size-lg="6" offset-md-="6" [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+          <ion-row >
+            <ion-col size-lg="12">
+            
+              <ion-row>
+                <ion-col>
+                  <div>
+                   <ion-item> <h1><strong> <p>Vaccine Input</p></strong></h1></ion-item>
+                    <ion-item>
+                     
+                      <ion-label>Vaccine Name</ion-label>
+                      <!-- <ion-input formControlName="vname" type="text"></ion-input> -->
+                      <ion-select value="vname"  formControlName="vcode">
+                        <ion-select-option value="NIL">NIL</ion-select-option>
+                        <ion-select-option value="Rabies">Rabies</ion-select-option>
+                        <ion-select-option value="Felv">Felv</ion-select-option>
+                        <ion-select-option value="tickfever">tickfever</ion-select-option>
+                        <ion-select-option value="chv4">chv4</ion-select-option> </ion-select>
+                    </ion-item>
+    
+                    <ion-item>
+                      <ion-label>Vaccine Code</ion-label>
+                      <!-- <ion-input formControlName="vcode" type="text"></ion-input> -->
+                      <ion-select value="vcode"  formControlName="vcode">
+                        <ion-select-option value="G45">G45</ion-select-option>
+                        <ion-select-option value="RB45">RB45</ion-select-option>
+                        <ion-select-option value="Fe89">Fe89</ion-select-option>
+                        <ion-select-option value="R11">R11</ion-select-option>
+                        <ion-select-option value="Cj789">Cj789</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+            
+                    <ion-item>
+                      <ion-label>Manufacture Date</ion-label>
+                      <ion-datetime formControlName="mdate" monthValues="1,2,3,4,5,6,7,8,9,10,11,12" yearValues="2016,2017,2018,2019,2020,2021" dayValues="01,02,03,04,05,06,08,09,10, 11, 12, 13, 14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31" displayFormat="DD/MMM/YYYY"></ion-datetime>
+                      <!-- <ion-input formControlName="mdate"  type="text"></ion-input> -->
+                    </ion-item>
+            
+                    <ion-item>
+                      <ion-label>Expire Date</ion-label>
+                      <ion-datetime formControlName="exdate" monthValues="1,2,3,4,5,6,7,8,9,10,11,12" yearValues="2019,2020,2021,2022,2023,2024,2025" dayValues="01,02,03,04,05,06,08,09,10, 11, 12, 13, 14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31" displayFormat="DD/MMM/YYYY"></ion-datetime>
+                      <!-- <ion-input formControlName="exdate" type="text"></ion-input> -->
+                    </ion-item>
+    
+                    <ion-item>
+                      <ion-label>Vaccine Product Code</ion-label>
+                      <ion-input formControlName="pcode" type="text"></ion-input>
+                    </ion-item>
+    
+               
+                  </div>
+                  
+                </ion-col>
+                
+              </ion-row>
+    
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </ion-content>
+    </ion-app>
+    </body>
+    </ion-content>
+    </ion-app>
+    
+    <ion-footer>
+      <ion-toolbar color="dark">
+        <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center" >
+          <ion-button type="submit" (click)="formSubmit()" color="primary" shape="full" expand="block">Register</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-text-center" >
+              <ion-back-button defaultHref="/" color="warning"></ion-back-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-toolbar>
+    </ion-footer>
+
+
+
+

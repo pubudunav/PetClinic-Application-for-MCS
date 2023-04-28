@@ -1,0 +1,131 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning" >
+    <ion-title>
+      PetClinic<ion-icon name="logo-octocat" ></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+<body>
+  <ion-app>
+  <ion-content >
+    <ion-grid size-lg="6" offset-md-="6">
+      <ion-row >
+        <ion-col size-lg="12">
+          <section class="full-width">
+          
+         
+          </section>
+          <section><ion-searchbar (ionInput)="filterList($event)" showCancelButton="never"></ion-searchbar>
+          </section>
+          <ion-row>
+            <ion-col>
+  
+<!--            
+              <ion-list>
+              
+                <ion-col>   <ion-item><ion-label>Date</ion-label></ion-item>   </ion-col>
+                <ion-col> <ion-item> <ion-label>Vaccine Name</ion-label></ion-item>   </ion-col>
+                <ion-col><ion-item><ion-label>Vaccine Code</ion-label></ion-item>   </ion-col>
+                  <ion-col><ion-item> <ion-label>Vaccine Id</ion-label></ion-item>   </ion-col>
+                    <ion-col>  <ion-item> <ion-label>Next Dose</ion-label></ion-item>   </ion-col>
+                      <ion-col><ion-item> <ion-label>Vet Id</ion-label></ion-item>   </ion-col>
+              </ion-list>
+           
+            </ion-col>
+          
+          </ion-row>
+   
+          <ion-row>
+            <ion-col>
+  
+             <div *ngFor="let vaccineCard of showList">
+              <ion-list>
+                <ion-item>
+                  <ion-label>{{vaccineCard.date}}</ion-label>
+                </ion-item>
+                  <ion-item><ion-label>{{vaccineCard.vname}}</ion-label></ion-item>
+               <ion-item> <ion-label>{{vaccineCard.vcode}}</ion-label></ion-item>
+                <ion-item><ion-label>{{vaccineCard.vaccineId}}</ion-label></ion-item>
+               <ion-item> <ion-label>{{vaccineCard.nxtDate}}</ion-label></ion-item>
+               <ion-item> <ion-label>{{vaccineCard.vetId}}</ion-label></ion-item>
+              </ion-list>
+          
+            </div>
+            </ion-col>
+            <ion-col>
+              <!-- <div>2 of 3</div> -->
+<div *ngFor="let vaccineCard of showList">
+  <ion-col>
+    <div>
+  <h1>Pet Id</h1>{{vaccineCard.pid}} 
+    </div>
+  </ion-col>
+ 
+                  <ion-col>
+                    <div>
+                  <strong>Date</strong>{{vaccineCard.date| date: 'dd/MM/yyyy'}} 
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                     <strong>Name of the Vaccine</strong> {{vaccineCard.vname}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                   <strong>Code of the vaccine</strong> {{vaccineCard.vcode}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                  <strong>Next Dose</strong> {{vaccineCard.nxtDate | date: 'dd/MM/yyyy'}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                  <strong>Vaccine Id</strong> {{vaccineCard.vaccineId}}
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                   <strong>Vet Id</strong>{{vaccineCard.vetId}}
+                    </div>
+                  </ion-col>
+                
+                </div>
+  
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+      </ion-row> 
+    </ion-grid>
+    
+  </ion-content>
+</ion-app>
+</body>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center" >
+          <ion-back-button defaultHref="/" color="warning"></ion-back-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
+
+

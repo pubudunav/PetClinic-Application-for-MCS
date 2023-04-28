@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning" >
+    <ion-title>
+      PetClinic<ion-icon name="logo-octocat" ></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated">
+      Appointments
+    </ion-list-header>
+
+    <ion-item *ngFor="let booking of Bookings" class="user-list">
+   
+      <ion-label>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{booking.date | date: 'dd/MM/yyyy'}}
+        </h5>
+        <p>
+          <ion-icon name="call"></ion-icon> {{booking.name}}
+        </p>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/edit-appointment/', booking.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteBooking(booking.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="presentModal(booking)">
+          <ion-icon name="eye" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+  <ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center" >
+          <ion-back-button defaultHref="/" color="warning"></ion-back-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

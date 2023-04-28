@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      PetClinic<ion-icon name="logo-octocat"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+<body>
+  <ion-app>
+  <h3>ADMIN PANEL</h3>
+<p>
+  <strong>Welcome to the PetClinic DashBoard</strong>
+  </p>
+  <ion-content >
+    <ion-grid size-lg="6" offset-md-="6">
+      <ion-row >
+        <ion-col size-lg="12">
+          <section class="full-width">
+            <ion-button expand="full" color="dark" (click)="petnav()">PET <img [src]=""></ion-button>
+          </section>
+          <section class="full-width">
+            <ion-button expand="full" color="dark" (click)="guardnav()">GUARDIAN <img [src]=""></ion-button>
+          </section>
+          <section class="full-width">
+            <ion-button expand="full" color="dark"(click)="vetnav()">VETERINARIAN</ion-button>
+          </section>
+           <section class="full-width">
+            <ion-button expand="full" color="dark"(click)="inventorynav()">VACCINE Inventory Input</ion-button>
+          </section>
+          <section class="full-width">
+            <ion-button expand="full" color="dark"(click)="appointmentnav()">Appointments</ion-button>
+          </section>
+          <section class="full-width">
+            <ion-button expand="full" color="dark"(click)="appointmentbooknav()">Appointment booking</ion-button>
+          </section>
+          <section class="full-width">
+            <ion-button expand="full" color="dark"(click)="clientappointments()">Client Appointments</ion-button>
+          </section>
+          <!-- <section class="full-width">
+            <ion-button expand="full" color="dark"(click)="event()">Publish Event</ion-button>
+          </section> -->
+          <section class="full-width">
+            <ion-button expand="full" color="dark"(click)="vcard()">View Vaccine Card</ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-content>
+</ion-app>
+</body>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button shape="round" fill="outline" color="warning" (click)="reportsView()">REPORT</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
+

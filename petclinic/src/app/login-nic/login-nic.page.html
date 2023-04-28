@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>loginNic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-col>
+  <h1>ddd</h1>
+    <div *ngFor="let pet of showList">
+     <ion-list>
+       <ion-item (click)="getPet(pet)">
+         <h1>{{pet.nic}}</h1>
+       </ion-item>
+         <ion-item><ion-label>{{pet.pname}}</ion-label></ion-item>
+      <ion-item> <ion-label>{{pet.color}}</ion-label></ion-item>
+       <ion-item><ion-label>{{pet.Gender}}</ion-label></ion-item>
+      <ion-item> <ion-label>{{pet.ptype}}</ion-label></ion-item>
+     </ion-list>
+
+   </div>
+   </ion-col>
+</ion-content>

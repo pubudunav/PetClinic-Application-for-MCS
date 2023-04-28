@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning" >
+    <ion-title>
+      PetClinic<ion-icon name="logo-octocat" ></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+      <ion-item>
+        <ion-label position="floating">Guardian Name</ion-label>
+        <ion-input formControlName="gname" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">pet Name</ion-label>
+        <ion-input formControlName="pname" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">NIC Of the Guardian</ion-label>
+        <ion-input formControlName="nic" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Appointment Date</ion-label>
+        <ion-datetime  required  formControlName="date" monthValues="1,2,3,4,5,6,7,8,9,10,11,12" yearValues="2019,2020,2021,2022,2023,2024,2025" dayValues="01,02,03,04,05,06,08,09,10, 11, 12, 13, 14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31" displayFormat="DD/MMM/YYYY"></ion-datetime>
+      
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input formControlName="dis" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="formSubmit()" type="submit" color="danger" shape="full" expand="block">Book Appointment</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center" >
+          <ion-back-button defaultHref="/" color="warning"></ion-back-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

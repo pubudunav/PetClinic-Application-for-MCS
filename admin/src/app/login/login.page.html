@@ -1,0 +1,71 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning" >
+    <ion-title>
+      PetClinic<ion-icon name="logo-octocat" ></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</ion-header>
+
+<ion-app>
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+<body>
+  <ion-app>
+  <ion-content >
+ <ion-text>username</ion-text>
+ <ion-input></ion-input>
+ <ion-item>
+  <ion-label position="floating">User Name</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Password</ion-label>
+  <ion-input type="password"></ion-input>
+</ion-item>
+
+<ion-button type="submit" (click)="login()" color="primary" shape="full" expand="block">Login</ion-button>
+
+<ion-text>username</ion-text>
+ <ion-input></ion-input>
+ <ion-item>
+  <ion-label position="floating">User Name</ion-label>
+  <ion-input [(ngModel)]="userName"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Password</ion-label>
+  <ion-input [(ngModel)]="password" type="password"></ion-input>
+</ion-item>
+<div (click)="register()">
+  <ion-label>Click here to register</ion-label>
+</div>
+
+
+  </ion-content>
+</ion-app>
+</body>
+</ion-content>
+</ion-app>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid>
+
+</ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center" >
+          <ion-back-button defaultHref="/" color="warning"></ion-back-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
